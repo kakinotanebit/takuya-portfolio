@@ -26,136 +26,7 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
 .site-footer{border-top:1px solid var(--line);padding:22px max(6vw,24px);display:flex;justify-content:space-between;color:#858a94;font-size:10px;letter-spacing:.04em}.site-footer a:hover{color:var(--accent)}
 @media(max-width:760px){.site-header{height:64px;padding:0 20px}.brand{font-size:11px}nav{gap:14px;font-size:11px}.hero{min-height:520px;padding:90px 24px}.orb-one{width:270px;height:270px;right:-70px;top:18%}.orb-two{width:190px;height:190px;right:-25px;top:26%}.section{padding:76px 20px}.section-heading{display:block;margin-bottom:42px}.section-intro{margin-top:22px}.work-card,.work-card.reverse{grid-template-columns:1fr;gap:25px;margin-bottom:75px}.work-card.reverse .work-image,.work-card.reverse .work-info{order:initial}.work-image{min-height:260px;aspect-ratio:1.1/1}.work-info h3{font-size:32px}.about-section{padding:76px 22px}.about-grid{grid-template-columns:1fr;gap:25px}.profile-list div{grid-template-columns:82px 1fr}.contact-section{padding:90px 20px}}
 
-.work-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  width: 100%;
-}
-
-.work-gallery img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.work-gallery img:only-child {
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 9;
-}
-.work-gallery img {
-  position: static;
-  inset: auto;
-  height: auto;
-}
-
-.work-image .work-gallery {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  width: 100%;
-}
-
-.work-image .work-gallery img {
-  position: static;
-  inset: auto;
-  display: block;
-  width: 100%;
-  height: auto;
-  min-width: 0;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.work-image .work-gallery img:only-child {
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 9;
-}.work-image .work-gallery {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  width: 100%;
-}
-
-.work-image .work-gallery img {
-  position: static;
-  inset: auto;
-  display: block;
-  width: 100%;
-  height: auto;
-  min-width: 0;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.work-image .work-gallery img:only-child {
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 9;
-}
-/* スライドショー：1枚ずつ表示 */
-.work-image .work-gallery {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.work-image .work-gallery img {
-  display: none;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: auto;
-  object-fit: cover;
-  border-radius: 0;
-}
-
-.work-image .work-gallery img.is-active {
-  display: block;
-}
-.work-image .work-gallery img {
-  display: none;
-}
-
-.work-image .work-gallery img.is-active {
-  display: block;
-}
-/* 画像が1枚だけの作品は常に表示 */
-.work-image .work-gallery img:only-child {
-  display: block;
-}
-/* 水流シミュレーションは常に表示 */
-.work-image.image-water .work-gallery img {
-  display: block !important;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* 画像切り替えをふわっと滑らかにする */
-.work-image .work-gallery img {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.work-image .work-gallery img.is-active,
-.work-image.image-water .work-gallery img {
-  opacity: 1;
-}
-
-/* 非表示画像がクリックなどを邪魔しないようにする */
-.work-image .work-gallery img:not(.is-active) {
-  pointer-events: none;
-}
-
-/* スライド画像を重ねてフェードさせる */
+/* 作品画像のスライドショー */
 .work-image .work-gallery {
   position: absolute;
   inset: 0;
@@ -170,6 +41,7 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
   inset: 0;
   width: 100%;
   height: 100%;
+  min-width: 0;
   aspect-ratio: auto;
   object-fit: cover;
   border-radius: 0;
@@ -177,12 +49,12 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
   transition: opacity 0.8s ease-in-out;
 }
 
+/* 選択中の画像を表示 */
 .work-image .work-gallery img.is-active {
   opacity: 1;
 }
 
 /* 水流シミュレーションは常に表示 */
 .work-image.image-water .work-gallery img {
-  display: block !important;
   opacity: 1 !important;
 }
