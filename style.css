@@ -58,3 +58,9 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
 .work-image.image-water .work-gallery img {
   opacity: 1 !important;
 }
+.work-period {
+  margin-top: 14px;
+  color: #a5a5ad;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
