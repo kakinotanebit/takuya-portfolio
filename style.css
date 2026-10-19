@@ -50,3 +50,27 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
   inset: auto;
   height: auto;
 }
+
+.work-image .work-gallery {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.work-image .work-gallery img {
+  position: static;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.work-image .work-gallery img:only-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
