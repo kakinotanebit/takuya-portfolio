@@ -45,3 +45,8 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
   grid-column: 1 / -1;
   aspect-ratio: 16 / 9;
 }
+.work-gallery img {
+  position: static;
+  inset: auto;
+  height: auto;
+}
