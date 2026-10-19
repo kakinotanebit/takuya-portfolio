@@ -119,3 +119,10 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
 .work-image .work-gallery img.is-active {
   display: block;
 }
+.work-image .work-gallery img {
+  display: none;
+}
+
+.work-image .work-gallery img.is-active {
+  display: block;
+}
