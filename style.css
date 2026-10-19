@@ -139,3 +139,18 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
   height: 100%;
   object-fit: cover;
 }
+/* 画像切り替えをふわっと滑らかにする */
+.work-image .work-gallery img {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.work-image .work-gallery img.is-active,
+.work-image.image-water .work-gallery img {
+  opacity: 1;
+}
+
+/* 非表示画像がクリックなどを邪魔しないようにする */
+.work-image .work-gallery img:not(.is-active) {
+  pointer-events: none;
+}
