@@ -130,3 +130,12 @@ nav{display:flex;gap:28px;font-size:12px;color:#c5c8ce}nav a:hover,.text-link:ho
 .work-image .work-gallery img:only-child {
   display: block;
 }
+/* 水流シミュレーションは常に表示 */
+.work-image.image-water .work-gallery img {
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
